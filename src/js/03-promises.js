@@ -52,11 +52,15 @@ function createPromise(position, delay) {
 };
 
 const onSuccess = ({position, delay}) => {
-  Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
-  console.log(delay);
+  Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`, {
+    timeout: 5000,
+  });
+  
 };
 
 const onError = ({position, delay}) => {
-  Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`)
+  Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`, {
+    timeout: 5000,
+  })
 };
 
