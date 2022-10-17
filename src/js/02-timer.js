@@ -29,7 +29,6 @@ const options = {
       if (timeDeadline < Date.now()) {
         startBtnRef.disabled = true;
         Notify.failure('Please choose a date in the future"', {
-              position: 'right-top',
               backOverlay: true,
               clickToClose: true,
                closeButton: true,
